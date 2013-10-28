@@ -1,0 +1,29 @@
+{
+  "name": "pretty-when-monitor",
+  "version": "0.1.0-beta1",
+  "description": "readable monitor for when.js",
+  "main": "scripts/js/lib/monitor.js",
+  "scripts": {
+    "test": "node ./node_modules/coffee-script/bin/cake test",
+    "prepublish": "node ./node_modules/coffee-script/bin/cake build"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.6.3",
+    "little-popo": "~0.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AriaMinaei/pretty-when-monitor.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Aria Minaei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AriaMinaei/pretty-when-monitor/issues"
+  },
+  "peerDependencies": {
+    "when": "~2.5.1"
+  }
+}
