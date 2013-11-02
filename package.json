@@ -1,7 +1,7 @@
 {
   "name": "pretty-when-monitor",
   "version": "0.1.0-beta1",
-  "description": "readable monitor for when.js",
+  "description": "readable monitor for unhandled rejections in when.js",
   "main": "scripts/js/lib/monitor.js",
   "scripts": {
     "test": "node ./node_modules/coffee-script/bin/cake test",
@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/AriaMinaei/pretty-when-monitor/issues"
   },
-  "peerDependencies": {
-    "when": "~2.5.1"
+  "dependencies": {
+    "when-monitor": "~0.1.0-beta1"
   }
 }
