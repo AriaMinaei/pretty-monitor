@@ -1,5 +1,5 @@
 {
-  "name": "pretty-when-monitor",
+  "name": "pretty-monitor",
   "version": "0.1.0-beta1",
   "description": "readable monitor for unhandled rejections in when.js",
   "main": "scripts/js/lib/monitor.js",
@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "coffee-script": "~1.6.3",
-    "little-popo": "~0.1.2"
+    "little-popo": "~0.1"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "url": "https://github.com/AriaMinaei/pretty-when-monitor/issues"
   },
   "dependencies": {
-    "when-monitor": "~0.1.0-beta1"
+    "when-monitor": "~0.1",
+    "pretty-error": "~0."
   }
 }

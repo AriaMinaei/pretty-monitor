@@ -1,3 +1,11 @@
 require './_prepare'
 
-PrettyWhenMonitor = mod 'PrettyWhenMonitor'
+prettyWhenMonitor = mod 'prettyWhenMonitor'
+
+prettyWhenMonitor 100
+
+wn = require 'when'
+
+wn().then ->
+
+	a.s()

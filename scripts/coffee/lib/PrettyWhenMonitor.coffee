@@ -1,44 +1,35 @@
-additionalStyle = require './PrettyWhenMonitor/additionalStyle'
-# ParsedError = require './ParsedError'
-# RenderKid = require 'RenderKid'
-# {object} = require 'utila'
+whenMonitor = require 'when-monitor'
 
-PrettyError = require 'pretty-error'
+getRenderer = ->
 
-module.exports = class PrettyWhenMonitor
+	PrettyError = require 'pretty-error'
 
-	self = @
+	r = new PrettyError
 
-	constructor: ->
+	r.appendStyle 'pretty-error':
 
-		@_prettyError = new PrettyError
+		marginLeft: 2
 
-		@appendStyle additionalStyle
+	r
 
-	_getStyle: ->
+deployed = no
 
-		@_prettyError.style
+module.exports = (interval = 100, renderer = null) ->
 
-	appendStyle: (toAppend) ->
+	return if deployed
 
-		@_prettyError.appendStyle toAppend
+	deployed = yes
 
-		@
+	unless renderer?
 
-	_getRenderer: ->
+		renderer = getRenderer()
 
-		@_prettyError.renderer
+	whenMonitor parseInt(interval), (rejections) ->
 
-	render: (e, logIt = no, skipModules = no) ->
+		for rejection in rejections
 
+			renderer.render rejection, yes
 
+		return
 
-	getObject: (e, skipModules = no) ->
-
-
-
-for prop in ['renderer', 'style'] then do ->
-
-	methodName = '_get' + prop[0].toUpperCase() + prop.substr(1, prop.length)
-
-	PrettyWhenMonitor::__defineGetter__ prop, -> do @[methodName]
+	return
