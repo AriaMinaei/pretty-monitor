@@ -14,7 +14,9 @@ getRenderer = ->
 
 deployed = no
 
-module.exports = (interval = 100, renderer = null) ->
+module.exports = (interval = 100, renderer = null, skipModules = [], maxTraceItems = 100) ->
+
+	skipModules.push 'pretty-monitor'
 
 	return if deployed
 
@@ -28,7 +30,7 @@ module.exports = (interval = 100, renderer = null) ->
 
 		for rejection in rejections
 
-			renderer.render rejection, yes
+			renderer.render rejection, yes, skipModules, maxTraceItems
 
 		return
 

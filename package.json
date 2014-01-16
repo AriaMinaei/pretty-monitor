@@ -1,6 +1,6 @@
 {
   "name": "pretty-monitor",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "readable monitor for unhandled rejections in when.js",
   "main": "scripts/js/lib/prettyWhenMonitor.js",
   "scripts": {
