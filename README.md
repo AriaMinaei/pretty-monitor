@@ -38,3 +38,41 @@ wn().then(function(){
 	someNonExistingFunction();
 });
 ```
+
+Customization
+-------------
+
+Pretty Monitor simply turns when.js rejections into js errors, and to render them, it uses [Pretty Error](https://github.com/AriaMinaei/pretty-error), which is very customizable.
+
+### Theming
+You can customize the appearance of the log using simple css-like commands:
+```javascript
+prettyMonitor = require('pretty-monitor');
+
+prettyError = prettyMonitor.start(); // start() returns an instance of PrettyError
+
+// here, we will change the appearance of the log...
+prettyError.appendStyle({
+
+	// ... using css selectors ...
+	'pretty-error > header > message': {
+
+		// ... with css properties ...
+		background: 'red',
+
+		padding: '0 1'
+
+	},
+
+	'pretty-error > header > title > kind': {
+
+		background: 'none',
+
+		color: 'grey'
+
+	}
+
+});
+```
+... which results in:
+![themed screenshot](https://github.com/AriaMinaei/pretty-monitor/raw/master/docs/images/themed.png)
