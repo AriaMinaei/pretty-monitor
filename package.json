@@ -1,8 +1,8 @@
 {
   "name": "pretty-monitor",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Readable monitor for unhandled rejections in when.js",
-  "main": "scripts/js/lib/prettyWhenMonitor.js",
+  "main": "scripts/js/lib/prettyMonitor.js",
   "scripts": {
     "test": "node ./node_modules/coffee-script/bin/cake test",
     "prepublish": "node ./node_modules/coffee-script/bin/cake build"
