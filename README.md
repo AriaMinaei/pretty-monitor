@@ -17,7 +17,7 @@ Pretty Monitor does the same thing with some formatting:
 Usage
 -----
 
-First, install with npm:
+Install with npm:
 
 	npm install pretty-monitor
 
@@ -35,6 +35,8 @@ var wn = require('when');
 require('pretty-monitor').start();
 
 wn().then(function(){
+	// this will throw an error and cause a rejection which won't be handled.
+	// Pretty Monitor will log this rejection to the console.
 	someNonExistingFunction();
 });
 ```
@@ -42,7 +44,7 @@ wn().then(function(){
 Customization
 -------------
 
-Pretty Monitor simply turns when.js rejections into js errors, and to render them, it uses [Pretty Error](https://github.com/AriaMinaei/pretty-error), which is very customizable.
+Pretty Monitor simply turns when.js rejections into js errors, and to render them, it uses [Pretty Error](https://github.com/AriaMinaei/pretty-error), which is very customizable:
 
 ### Theming
 You can customize the appearance of the log using simple css-like commands:
@@ -51,7 +53,7 @@ prettyMonitor = require('pretty-monitor');
 
 prettyError = prettyMonitor.start(); // start() returns an instance of PrettyError
 
-// here, we will change the appearance of the log...
+// here, we will change the appearance of the log ...
 prettyError.appendStyle({
 
 	// ... using css selectors ...
@@ -74,14 +76,15 @@ prettyError.appendStyle({
 
 });
 ```
-... which results in:
+... which will make our log look like:
 ![themed screenshot](https://github.com/AriaMinaei/pretty-monitor/raw/master/docs/images/themed-screenshot.png)
 
 ### Manipulating the contents of the log
 
 [Pretty Error](https://github.com/AriaMinaei/pretty-error) allows a bunch of customizations on the contents of its logs. Here is one example:
 ```javascript
-// this line substitutes a long path in the stack trace with a short string, making our log a little bit tidier:
+// this line substitutes a long path in the stack trace
+// with a short string, making our log a little bit tidier.
 prettyError.alias('E:/open-source/theatrejs/scripts/js', '(Theatre.js)');
 ```
 And the result would look like:
@@ -91,3 +94,4 @@ Take a look at [Pretty Error's docs](https://github.com/AriaMinaei/pretty-error)
 
 ## State of The Project
 
+This is a work in progress. I'll try to fix bugs and keep it up-to-date with when.js. Feel free to open an issue if something isn't working. And of course, Pull Requests are more than welcome :)
