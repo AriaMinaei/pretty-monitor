@@ -75,4 +75,19 @@ prettyError.appendStyle({
 });
 ```
 ... which results in:
-![themed screenshot](https://github.com/AriaMinaei/pretty-monitor/raw/master/docs/images/themed.png)
+![themed screenshot](https://github.com/AriaMinaei/pretty-monitor/raw/master/docs/images/themed-screenshot.png)
+
+### Manipulating the contents of the log
+
+[Pretty Error](https://github.com/AriaMinaei/pretty-error) allows a bunch of customizations on the contents of its logs. Here is one example:
+```javascript
+// this line substitutes a long path in the stack trace with a short string, making our log a little bit tidier:
+prettyError.alias('E:/open-source/theatrejs/scripts/js', '(Theatre.js)');
+```
+And the result would look like:
+![aliased screenshot](https://github.com/AriaMinaei/pretty-monitor/raw/master/docs/images/aliased-screenshot.png)
+
+Take a look at [Pretty Error's docs](https://github.com/AriaMinaei/pretty-error) for more examples.
+
+## State of The Project
+
