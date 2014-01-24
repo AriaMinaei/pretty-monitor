@@ -1,7 +1,7 @@
 {
   "name": "pretty-monitor",
-  "version": "0.1.2",
-  "description": "readable monitor for unhandled rejections in when.js",
+  "version": "0.1.3",
+  "description": "Readable monitor for unhandled rejections in when.js",
   "main": "scripts/js/lib/prettyWhenMonitor.js",
   "scripts": {
     "test": "node ./node_modules/coffee-script/bin/cake test",
