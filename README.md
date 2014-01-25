@@ -95,3 +95,6 @@ Take a look at [PrettyError's docs](https://github.com/AriaMinaei/pretty-error) 
 ## State of The Project
 
 This is a work in progress. I'll try to fix bugs and keep it up-to-date with when.js. Feel free to open an issue if something isn't working, and of course, Pull Requests are more than welcome :)
+
+## License
+MIT
