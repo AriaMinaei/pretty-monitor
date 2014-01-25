@@ -1,6 +1,6 @@
-# Pretty Monitor
+# PrettyMonitor
 
-Pretty Monitor is a small debug utility that'll catch escaped [when.js](https://github.com/cujojs/when) rejections in node.js apps and dumps them in a readable format.
+PrettyMonitor is a small debug utility that'll catch escaped [when.js](https://github.com/cujojs/when) rejections in node.js apps and dumps them in a readable format.
 
 Screenshot
 -----------
@@ -9,9 +9,9 @@ This is similar to when.js's default monitoring tool: `when/monitor/console.` He
 
 ![screenshot of when/monitor/console](https://github.com/AriaMinaei/pretty-monitor/raw/master/docs/images/when-console-screenshot.png)
 
-Pretty Monitor does the same thing with some formatting:
+PrettyMonitor does the same thing with some formatting:
 
-![screenshot of Pretty Monitor](https://github.com/AriaMinaei/pretty-monitor/raw/master/docs/images/pretty-monitor-screenshot.png)
+![screenshot of PrettyMonitor](https://github.com/AriaMinaei/pretty-monitor/raw/master/docs/images/pretty-monitor-screenshot.png)
 
 
 Usage
@@ -36,7 +36,7 @@ require('pretty-monitor').start();
 
 wn().then(function(){
 	// this will throw an error and cause a rejection which won't be handled.
-	// Pretty Monitor will log this rejection to the console.
+	// PrettyMonitor will log this rejection to the console.
 	someNonExistingFunction();
 });
 ```
@@ -44,7 +44,7 @@ wn().then(function(){
 Customization
 -------------
 
-Pretty Monitor simply turns when.js rejections into js errors, and to render them, it uses [Pretty Error](https://github.com/AriaMinaei/pretty-error), which is very customizable:
+PrettyMonitor simply turns when.js rejections into js errors, and to render them, it uses [PrettyError](https://github.com/AriaMinaei/pretty-error), which is very customizable:
 
 ### Theming
 You can customize the appearance of the log using simple css-like commands:
@@ -81,7 +81,7 @@ prettyError.appendStyle({
 
 ### Manipulating the contents of the log
 
-[Pretty Error](https://github.com/AriaMinaei/pretty-error) allows a bunch of customizations on the contents of its logs. Here is one example:
+[PrettyError](https://github.com/AriaMinaei/pretty-error) allows a bunch of customizations on the contents of its logs. Here is one example:
 ```javascript
 // this line substitutes a long path in the stack trace
 // with a short string, making our log a little bit tidier.
@@ -90,7 +90,7 @@ prettyError.alias('E:/open-source/theatrejs/scripts/js', '(Theatre.js)');
 And the result would look like:
 ![aliased screenshot](https://github.com/AriaMinaei/pretty-monitor/raw/master/docs/images/aliased-screenshot.png)
 
-Take a look at [Pretty Error's docs](https://github.com/AriaMinaei/pretty-error) for more examples.
+Take a look at [PrettyError's docs](https://github.com/AriaMinaei/pretty-error) for more examples.
 
 ## State of The Project
 
