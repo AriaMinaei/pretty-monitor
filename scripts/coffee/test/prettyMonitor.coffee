@@ -4,6 +4,8 @@ prettyMonitor = mod 'prettyMonitor'
 
 pe = prettyMonitor.start 100
 
+pe.unskipAllPackages()
+
 wn = require 'when'
 
 wn().then ->
