@@ -1,6 +1,5 @@
-(I finally got to test this on linux and it looks like there are a few bugs I have to fix. I'm working on it now, and hopefully, I'll remove this note very soon.)
-
 # PrettyMonitor
+[![Build Status](https://secure.travis-ci.org/AriaMinaei/pretty-monitor.png)](http://travis-ci.org/AriaMinaei/pretty-monitor)
 
 PrettyMonitor is a small debug utility that'll catch escaped [when.js](https://github.com/cujojs/when) rejections in node.js apps and dumps them in a readable format.
 

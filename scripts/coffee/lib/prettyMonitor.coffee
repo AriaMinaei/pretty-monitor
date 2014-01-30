@@ -6,17 +6,17 @@ makeRenderer = ->
 
 	PrettyError = require 'pretty-error'
 
-	r = new PrettyError
+	pe = new PrettyError
 
-	r.skipNodeFiles()
+	pe.skipNodeFiles()
 
-	r.skipPackage 'pretty-monitor'
+	pe.skipPackage 'pretty-monitor'
 
-	r.appendStyle 'pretty-error':
+	pe.appendStyle 'pretty-error':
 
 		marginLeft: 2
 
-	r
+	pe
 
 deployed = no
 
@@ -38,7 +38,7 @@ module.exports.start = (interval = 100, renderer = null) ->
 
 		for rejection in rejections
 
-			globalRenderer.render rejection, yes
+			console.log globalRenderer.render rejection, no
 
 		return
 

@@ -1,6 +1,6 @@
 {
   "name": "pretty-monitor",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Readable monitor for unhandled rejections in when.js",
   "main": "scripts/js/lib/prettyMonitor.js",
   "scripts": {
@@ -14,18 +14,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AriaMinaei/pretty-when-monitor.git"
+    "url": "https://github.com/AriaMinaei/pretty-monitor.git"
   },
   "keywords": [
-    "test"
+    "when", "debug", "monitor"
   ],
   "author": "Aria Minaei",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AriaMinaei/pretty-when-monitor/issues"
+    "url": "https://github.com/AriaMinaei/pretty-monitor/issues"
   },
   "dependencies": {
     "when-monitor": "~0.1",
-    "pretty-error": "~0.1"
+    "pretty-error": "~0.1.16"
   }
 }

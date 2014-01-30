@@ -8,4 +8,4 @@ wn = require 'when'
 
 wn().then ->
 
-	a.b()
+	throw Error "This unhandled rejection is caught, which means PrettyMonitor is working"
