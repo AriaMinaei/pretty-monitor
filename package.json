@@ -1,8 +1,8 @@
 {
   "name": "pretty-monitor",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "description": "Readable monitor for unhandled rejections in when.js",
-  "main": "scripts/js/lib/prettyMonitor.js",
+  "main": "scripts/js/lib/PrettyMonitor.js",
   "scripts": {
     "test": "node ./node_modules/coffee-script/bin/cake test",
     "prepublish": "node ./node_modules/coffee-script/bin/cake build"
@@ -10,7 +10,7 @@
   "devDependencies": {
     "coffee-script": "~1.6.3",
     "little-popo": "~0.1",
-    "when": "~2.7"
+    "when": "~3.1"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,6 @@
     "url": "https://github.com/AriaMinaei/pretty-monitor/issues"
   },
   "dependencies": {
-    "when-monitor": "~0.1",
     "pretty-error": "~0.1.16"
   }
 }
