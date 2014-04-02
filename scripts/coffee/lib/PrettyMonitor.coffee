@@ -2,7 +2,9 @@ PrettyError = require 'pretty-error'
 
 module.exports = class PrettyMonitor
 
-	constructor: (@prettyError = self.instantiatePrettyError()) ->
+	constructor: (@_prettyError = self._instantiatePrettyError()) ->
+
+	getPrettyError: -> @_prettyError
 
 	log: (traces) ->
 
@@ -26,7 +28,7 @@ module.exports = class PrettyMonitor
 
 			firstLine = firstLine.substr match[0].length, firstLine.length
 
-		console.error @prettyError.render
+		console.error @_prettyError.render
 
 			wrapper: 'Escaped'
 
@@ -40,15 +42,13 @@ module.exports = class PrettyMonitor
 
 	self = @
 
-	@instantiatePrettyError: ->
+	@_instantiatePrettyError: ->
 
 		pe = new PrettyError
 
 		pe.skipNodeFiles()
 
 		pe.appendStyle 'pretty-error':
-
-			marginLeft: 2
 
 			marginTop: 1
 
