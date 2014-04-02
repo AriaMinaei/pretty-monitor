@@ -48,6 +48,19 @@ module.exports = class PrettyMonitor
 
 		pe.skipNodeFiles()
 
+		pe.skipPackage 'when'
+
+		pe.filter (traceLine, lineNumber) ->
+
+			# 'DynamicTimeline.module.exports.DynamicTimeline._verifyProp'
+			if typeof traceLine.what is 'string'
+
+				# we can shorten it with a regex:
+				traceLine.what = traceLine.what.replace /(.*\.module\.exports\.)(.*)/, '$2'
+
+
+			return
+
 		pe.appendStyle 'pretty-error':
 
 			marginTop: 1
