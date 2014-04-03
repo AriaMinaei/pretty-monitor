@@ -40,6 +40,10 @@ module.exports = class PrettyMonitor
 
 		return
 
+	configurePromiseMonitor: (pm) ->
+
+		# leaving this empty until when@3.1 is final
+
 	self = @
 
 	@_instantiatePrettyError: ->
