@@ -26,7 +26,30 @@ wn = require('when');
 PrettyMonitor = require('pretty-monitor');
 PromiseMonitor = require('when/monitor/PromiseMonitor');
 
-// then, start the monitor:
+// then, instantiate the monitor:
+promiseMonitor = new PromiseMonitor(new PrettyMonitor());
+
+// ... and start it:
+promiseMonitor.monitor(wn.Promise);
+
+// to see a sample rejection:
+wn().then(function(){
+	// this will throw an error and cause a rejection which won't be handled.
+	// PrettyMonitor will log this rejection to the console.
+	someNonExistingFunction();
+});
+```
+
+#### Note on `when-3.1`
+
+The monitoring api on `when-3.1` looks a tiny bit different:
+```javascript
+// require the dependencies first:
+wn = require('when');
+PrettyMonitor = require('pretty-monitor');
+PromiseMonitor = require('when/monitor/PromiseMonitor');
+
+// this is the different part:
 console.promiseMonitor = new PromiseMonitor(new PrettyMonitor());
 
 // to see a sample rejection:
