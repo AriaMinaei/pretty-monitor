@@ -10,7 +10,7 @@
   "devDependencies": {
     "coffee-script": "~1.6.3",
     "little-popo": "~0.1",
-    "when": "~3.1"
+    "when": "~3.2"
   },
   "repository": {
     "type": "git",
